@@ -1684,6 +1684,8 @@ try {
     const today = new Date()
     const localVersion = `${today.getFullYear()}.${today.getMonth() + 1}.${today.getDay()}.${GITHUB_RUN_NUMBER}`
     const branch = /[^/]*$/.exec(GITHUB_REF)[0]
+    core.info(branch)
+    core.info(releaseBranch)
     if (branch == releaseBranch)
         core.setOutput('version', localVersion)
     core.setOutput('version', `${localVersion}-${branch.substring(0, 20)}`)
