@@ -1,0 +1,13 @@
+name: "GitHub Date-Version"
+description: "Use todays date and build info to create a version"
+inputs:
+  release-branch: # id of input
+    description: "Name of the release branch"
+    required: false
+    default: "master"
+outputs:
+  version: # id of output
+    description: "The version calculated"
+runs:
+  using: "node16"
+  main: "dist/index.js"
