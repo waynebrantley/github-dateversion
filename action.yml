@@ -9,5 +9,5 @@ outputs:
   version: # id of output
     description: "The version calculated"
 runs:
-  using: "node16"
+  using: "node20"
   main: "dist/index.js"
