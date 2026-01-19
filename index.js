@@ -8,7 +8,7 @@ try {
     
     // const branch = /[^/]*$/.exec(GITHUB_REF)[0]  //GITHUB_REF out of process.env
     // core.info(branch)
-    const branchName = (GITHUB_HEAD_REF || GITHUB_REF_NAME).replace(/\//g, '-')
+    const branchName = (GITHUB_HEAD_REF || GITHUB_REF_NAME).split('/').pop()
     core.info(branchName)
     core.info(releaseBranch)
     if (branchName == releaseBranch)
